@@ -19,5 +19,8 @@ export default (function () {
     userSend(content, phoneUuid) {
       return postFunction('/feed_back/user_post', { content, phoneUuid })
     },
+    handleIssue(phoneUuid) {
+      return postFunction('/feed_back/set_handled', { phoneUuid })
+    },
   };
 })()
