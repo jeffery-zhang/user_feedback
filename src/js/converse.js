@@ -20,6 +20,7 @@ $(() => {
     let html = ''
     data.forEach(item => {
       html += `<div class="column clearfix">
+                <span class="avatar ${item.target == 1 ? 'client' : 'service'} ${item.target == target ? 'right' : 'left'}"></span>
                 <div class="bubble ${item.target == target ? 'right' : 'left'}">
                   ${item.content}
                 </div>
