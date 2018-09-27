@@ -20,7 +20,7 @@ $(() => {
     data.forEach(item => {
       html += `<div class="issue" data-uuid="${item.uuid}">
                 <div class="user">用户: ${item.uuid}</div>
-                <div class="content ellipsis">问题: ${item.content}</div>
+                <div class="content">问题: ${item.content}</div>
                 <div class="status">
                   <span>${item.status > 1 ? '已解决' : '未解决'}</span>
                   <button data-uuid="${item.uuid}" class="set-status ${item.status == 2 ? 'hidden' : ''}">问题已解决</button>
