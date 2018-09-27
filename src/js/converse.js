@@ -47,4 +47,10 @@ $(() => {
       sendMsg(content)
     }
   })
+
+  $('.send').on('click', () => {
+    const content = $('.reply').val()
+    $('.reply').val('')
+    sendMsg(content)
+  })
 });
