@@ -30,6 +30,7 @@ $(() => {
   }
 
   function sendMsg(content) {
+    if (!content) return;
     const method = target == 1 ? 'userSend' : 'manageSend'
     post[method](content, phoneUuid).then(res => {
       if (res.result) {
@@ -42,7 +43,7 @@ $(() => {
 
   $('.reply').on('keyup', function(event) {
     const content = $(this).val()
-    if (event.keyCode == 13 && !!content) {
+    if (event.keyCode == 13) {
       $(this).val('')
       sendMsg(content)
     }
